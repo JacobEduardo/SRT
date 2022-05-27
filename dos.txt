@@ -1,0 +1,15 @@
+1
+00:00:05,041 --> 00:00:06,916
+ANTES EN OUTER RANGE
+
+2
+00:00:07,000 --> 00:00:08,708
+Tienes hermosas tierras.
+
+3
+00:00:08,791 --> 00:00:11,708
+Hay algo muy especial aquí, ¿sabías?
+
+4
+00:00:12,750 --> 00:00:14,166
+¡Mierda!
