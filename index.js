@@ -7,7 +7,6 @@ function Main() {
         if (error) {
             throw error;
         }
-        console.log(files);
 
         var archivo_srt_1 = fs.readFileSync('./uno.txt', 'UTF-8');
 
@@ -21,37 +20,46 @@ function Main() {
 
 function CombineSubtitles (srt1, srt2){
 
-    var one = Clean(srt1);
-    var two = Clean(srt2)
+    var one = CleanEsp(srt1);
+    var two = CleanEng(srt2)
     flag = 0;
     flag2 = 0;
     n1 = 0;
     n2 = 0;
     n3 = 0;
     arr = [];
+
     var time_srt1;
     var time_srt2;
 
     while (flag == 0) {
-        time_srt1 = GetTime(one[n1]);
-        time_srt2 = GetTime(two[n2]);
 
-        if(n2 == two.length - 1){
-            flag = 1;
-            console.log("cambio");
+        if(n2 == two.length ){
             while (flag2 == 0){
-                n3 = n3 + 1;
                 arr[n3] = one[n1];
+                n3 = n3 + 1;
                 n1 = n1 + 1;
-                if(n1 == one.length - 1){
+                if(n1 == one.length){
                     flag2 = 1;
                 }
             }
+            break;
         }
 
-        if(n1 == one.length - 1){
-            flag = 1;
+        if(n1 == one.length){
+            while (flag2 == 0){
+                arr[n3] = two[n2];
+                n3 = n3 + 1;
+                n2 = n2 + 1;
+                if(n2 == two.length){
+                    flag2 = 1;
+                }
+            }
+            break;
         }
+
+        time_srt1 = GetTime(one[n1]);
+        time_srt2 = GetTime(two[n2]);
 
         if (time_srt1 < time_srt2) {
             arr[n3] = one[n1];
@@ -69,15 +77,40 @@ function CombineSubtitles (srt1, srt2){
             n1 = n1 + 1;
             n2 = n2 + 1;
         }
-        console.log(arr);
-        if(n3 == 3){
-            flag = 0;
-        }
     }
 
+    arr.forEach(element => {
+        console.log(element);
+    })
 }
 
-function Clean (srt){
+function CleanEsp (srt){
+    //inserte codigo para eliminar los primeros enter XD
+    srt1_arr = srt.split(/\n\s*\n/);
+
+    var n = 0;
+    var array1 = [];
+    srt1_arr.forEach(element => {
+        num = element.indexOf("\n");
+        element = element.substring(num + 1);
+
+        num = element.indexOf("\n");
+
+        uno = element.substring(0 , num);
+
+        dos = element.substring(num + 1);
+        dos = dos.replace(/(\r\n|\n|\r)/gm, " ")
+        tres =  uno + "\n" + "<font color='#FFFF00'>" + "\n" + dos;
+
+        array1[n] = tres;
+
+        n = n + 1;
+    });
+    return array1;
+}
+
+
+function CleanEng (srt){
     //inserte codigo para eliminar los primeros enter XD
     srt1_arr = srt.split(/\n\s*\n/);
 
@@ -99,7 +132,6 @@ function Clean (srt){
 
         n = n + 1;
     });
-
     return array1;
 }
 

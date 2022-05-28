@@ -1,15 +1,78 @@
-1
-00:00:05,041 --> 00:00:06,916
-ANTES EN OUTER RANGE
+218
+00:15:01,833 --> 00:15:03,791
+Um...
 
-2
-00:00:07,000 --> 00:00:08,708
-Tienes hermosas tierras.
+219
+00:15:03,875 --> 00:15:06,166
+You tell your dad I say hi.
 
-3
-00:00:08,791 --> 00:00:11,708
-Hay algo muy especial aquí, ¿sabías?
+220
+00:15:35,125 --> 00:15:38,541
+Hey, Amy. You want a ride?
 
-4
-00:00:12,750 --> 00:00:14,166
-¡Mierda!
+221
+00:15:59,083 --> 00:16:01,000
+You want?
+
+222
+00:16:01,083 --> 00:16:03,708
+No. Thanks.
+
+223
+00:16:15,333 --> 00:16:17,916
+Maybe Trevor's
+with your mom somewhere?
+
+224
+00:16:21,208 --> 00:16:23,208
+What do you mean?
+
+225
+00:17:07,708 --> 00:17:09,833
+Mrs. Abbott?
+Mrs. Abbott!
+
+226
+00:17:09,916 --> 00:17:11,041
+Wait, wait.
+
+227
+00:17:11,125 --> 00:17:12,309
+- You forgot this.
+- Oh, thanks.
+
+228
+00:17:12,333 --> 00:17:14,125
+Yeah, you're welcome.
+
+229
+00:17:23,583 --> 00:17:25,333
+Rebecca?
+
+230
+00:17:43,416 --> 00:17:45,708
+Ow. Shit.
+
+231
+00:17:45,791 --> 00:17:48,833
+- You all right?
+- Yeah, I'm fine.
+
+232
+00:17:49,916 --> 00:17:51,125
+Fuck.
+
+233
+00:17:53,708 --> 00:17:55,833
+- You sure you're all right?
+- Yeah, I'm sure.
+
+234
+00:17:55,916 --> 00:17:59,333
+Worry about yourself,
+about riding tonight.
+
+235
+00:17:59,416 --> 00:18:01,541
+It's your last shot, pal.
+Keep your head on straight.
