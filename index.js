@@ -34,7 +34,11 @@ function CombineSubtitles (srt1, srt2){
 
     while (flag == 0) {
 
-        if(n2 == two.length ){
+        if(n3 > (n1 + n2) ){
+            break;
+        }
+
+        if(n2 == two.length - 1){
             while (flag2 == 0){
                 arr[n3] = one[n1];
                 n3 = n3 + 1;
@@ -46,7 +50,7 @@ function CombineSubtitles (srt1, srt2){
             break;
         }
 
-        if(n1 == one.length){
+        if(n1 == one.length - 1){
             while (flag2 == 0){
                 arr[n3] = two[n2];
                 n3 = n3 + 1;
@@ -79,8 +83,20 @@ function CombineSubtitles (srt1, srt2){
         }
     }
 
+    console.log(two.length);
+    console.log(one.length);
+    console.log(arr.length);
+
+    Imprimir(arr);
+}
+
+function Imprimir (arr){
+    n = 0;
     arr.forEach(element => {
+        console.log(n);
         console.log(element);
+        console.log("\n");
+        n = n + 1;
     })
 }
 
@@ -100,7 +116,7 @@ function CleanEsp (srt){
 
         dos = element.substring(num + 1);
         dos = dos.replace(/(\r\n|\n|\r)/gm, " ")
-        tres =  uno + "\n" + "<font color='#FFFF00'>" + "\n" + dos;
+        tres =  uno + "\n" + "<font color='#FFFF00'>" + "\n" + dos + "{\\an2}";
 
         array1[n] = tres;
 
@@ -126,7 +142,7 @@ function CleanEng (srt){
 
         dos = element.substring(num + 1);
         dos = dos.replace(/(\r\n|\n|\r)/gm, " ")
-        tres =  uno + "\n" + dos;
+        tres =  uno + "\n" + "<font color='#FFFFFF'>" + "\n" + dos + "{\\an8}";
 
         array1[n] = tres;
 
@@ -144,6 +160,7 @@ function GetTime(srt){
     s = s.replace(",",".");
 
     time = h + m + s;
+    time = parseInt(time, 10);
     return time;
 }
 
